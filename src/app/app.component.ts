@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { CardService } from './card.service';
+import { CardService } from './services/card.service';
 import { switchMap, tap } from 'rxjs';
+import { HomeComponent } from './components/home/home.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
-  templateUrl: "app.html",
+  imports: [RouterOutlet, HomeComponent],
+  templateUrl: "app.component.html",
   styles: []
 })
 export class AppComponent {

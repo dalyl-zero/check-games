@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, of, tap } from "rxjs";
-import { DrawCard } from "../types/draw-card";
+import { DrawCard } from "../../types/draw-card";
 import { HttpClient } from "@angular/common/http";
-import { ShuffleCard } from "../types/shuffle-card";
+import { ShuffleCard } from "../../types/shuffle-card";
 
 @Injectable({
     providedIn: "root"
