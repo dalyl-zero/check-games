@@ -1,11 +1,53 @@
 <!-- navbar-component -->
 <app-navbar></app-navbar>
-<div class="p-20 bg-gray-800 grid grid-cols-1 justify-items-center gap-y-4">
-    <h1 class="sm:text-center text-5xl font-bold text-white">
-        Unleash Your Strategy in {{title}}!
-    </h1>
-    <p class="sm:text-center text-lg text-gray-300 mt-4">
-        Play a simple card game and compete with other players.
+<div class="header flex bg-gray-800 overflow-hidden">
+    <div class="py-20 pl-12 w-7/12 grid grid-cols-1 justify-items-start gap-y-4">
+        <h1 class="text-6xl font-bold text-white">
+            Unleash Your Card Game in {{title}}!
+        </h1>
+        <p class="text-lg text-gray-300 mt-4">
+            Play a simple card game and compete with other players.
+            Are you ready to dominate the arena?
+        </p>
+        <div class="flex justify-between gap-4">
+            <app-button text="PLAY NOW" _class="text-xl px-8"></app-button>
+            <app-button text="How to Play"
+                _class="text-xl px-8 bg-transparent border border-white text-gray-100 hover:border-indigo-700"></app-button>
+        </div>
+    </div>
+    <div class="hero-wrapper w-6/12">
+        <img class="h-full transition scale-105 w-full translate-x-1 hover:-translate-x-2 hover:-translate-y-1 hover:sepia"
+            src="/assets/hero-img.png" alt="A playing card">
+    </div>
+</div>
+
+<!-- How to play section -->
+<div class="how-to-play bg-gray-100 py-20 px-12">
+    <h2 class="text-4xl font-bold text-gray-800">CheckGames Gameplay</h2>
+    <p class="text-lg text-gray-600 mt-4">
+        Learn how to play the card game and dominate the arena.
     </p>
-    <app-button text="PLAY NOW" _class="text-xl mt-8 tex"></app-button>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+
+        <div
+            class="grid auto-rows-auto gap-6 w-96 bg-gray-800 text-gray-100 rounded-lg shadow-lg p-5 justify-items-center text-center">
+            <img class="max-h-72" src="/assets/howto-0.png" alt="Step 3">
+            <h3 class="text-2xl font-bold">Each player starts with 5 cards</h3>
+        </div>
+        <div
+            class="grid auto-rows-auto gap-6 w-96 bg-gray-800 text-gray-100 rounded-lg shadow-lg p-5 justify-items-center text-center text-balance">
+            <img class="max-h-72 " src="/assets/howto-1.png" alt="howto 2">
+            <h3 class="text-2xl font-bold">Players take turns drawing and playing cards</h3>
+        </div>
+        <div
+            class="grid auto-rows-auto gap-6 w-96 bg-gray-800 text-gray-100 rounded-lg shadow-lg p-5 justify-items-center text-center text-balance">
+            <img class="max-h-72 " src="/assets/howto-3.png" alt="How to step 3">
+            <h3 class="text-2xl font-bold">The game ends when a player's hand reach zero.</h3>
+        </div>
+        <div
+            class="grid auto-rows-auto gap-6 w-96 bg-gray-800 text-gray-100 rounded-lg shadow-lg p-5 justify-items-center text-center text-balance">
+            <img class="max-h-72 aspect-square" src="/assets/howto-4.png" alt="How to step 4">
+            <h3 class="text-2xl font-bold">The player with no remaining cards is the winner.</h3>
+        </div>
+    </div>
 </div>
