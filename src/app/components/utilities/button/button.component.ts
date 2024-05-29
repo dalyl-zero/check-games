@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { twMerge } from "tailwind-merge";
 
 @Component({
     selector: "app-button",
@@ -23,11 +24,6 @@ export class ButtonComponent {
     }
 
     ngOnChanges() {
-        this.className = [
-            ...new Set([
-                ...this.defaultStyle.split(" "),
-                ...this.className.split(" "),
-            ]),
-        ].join(" ");
+        this.className = twMerge(this.defaultStyle, this.className);
     }
 }
