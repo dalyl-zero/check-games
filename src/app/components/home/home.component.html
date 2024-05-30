@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="hero-wrapper w-6/12">
-        <img class="h-full transition scale-105 w-full translate-x-1 hover:-translate-x-2 hover:-translate-y-1 hover:sepia"
+        <img class="h-full transition scale-105 w-full translate-x-1 hover:-translate-x-2 hover:-translate-y-1 hover:sepia animate-pulse"
             src="/assets/img/hero-img.png" alt="A playing card">
     </div>
 </div>
@@ -33,23 +33,62 @@
                 Learn how to play the card game and dominate the arena.
             </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-            <app-card [style]="cardStyles.Default">
-                <img class="h-72 relative group-hover:scale-105 transition" src="/assets/img/howto-0.png" alt="Step 3">
-                <h3 class="text-2xl font-bold">Each player starts with 5 cards</h3>
-            </app-card>
-            <app-card [style]="cardStyles.Default">
-                <img class="h-72 relative group-hover:scale-105 transition" src="/assets/img/howto-1.png" alt="Step 3">
-                <h3 class="text-2xl font-bold">Players take turns drawing and playing cards</h3>
-            </app-card>
-            <app-card [style]="cardStyles.Default">
-                <img class="h-72 relative group-hover:scale-105 transition" src="/assets/img/howto-3.png" alt="Step 3">
-                <h3 class="text-2xl font-bold">The game ends when a player's hand reach zero.</h3>
-            </app-card>
-            <app-card [style]="cardStyles.Default">
-                <img class="h-72 relative group-hover:scale-105 transition" src="/assets/img/howto-4.png" alt="Step 3">
-                <h3 class="text-2xl font-bold">The player with no remaining cards is the winner.</h3>
-            </app-card>
+        <div class="grid grid-cols-1 mt-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <app-card [style]="cardStyles.Default">
+                    <img class="h-72 relative group-hover:scale-105 transition" src="/assets/img/howto-0.png"
+                        alt="Step 3">
+                </app-card>
+                <div>
+                    <h3 class="text-2xl font-bold">Each player starts with 5 cards</h3>
+                    <p class="text-gray-600 text-lg mt-4">The primary objective of the game is to outpace your opponents
+                        by
+                        being the first to discard all the cards in your hand. Each player starts with a set number of
+                        cards, and through strategic play and careful consideration of each move, they must work towards
+                        emptying their hand.</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <app-card [style]="cardStyles.Default">
+                    <img class="h-72 relative group-hover:scale-105 transition" src="/assets/img/howto-1.png"
+                        alt="Step 3">
+                </app-card>
+                <div class="md:order-first">
+                    <h3 class="text-2xl font-bold">Players take turns drawing and playing cards</h3>
+                    <p class="text-gray-600 text-lg mt-4">Gameplay revolves around the discard pile, which dictates the
+                        pace and
+                        direction of the game. To make a move, you must play a card from your hand that corresponds in
+                        rank or suit to the top card on the discard pile. For example, if the top card is a five of
+                        hearts, you can play any five or any heart from your hand. This rule adds a layer of strategy,
+                        as players must decide the optimal time to play certain cards, potentially holding back powerful
+                        moves for later stages of the game.</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <app-card [style]="cardStyles.Default">
+                    <img class="h-72 relative group-hover:scale-105 transition" src="/assets/img/howto-3.png"
+                        alt="Step 3">
+                </app-card>
+                <div>
+                    <h3 class="text-2xl font-bold">The game ends when a player's hand reach zero.</h3>
+                    <p class="text-gray-600 text-lg mt-4">Victory is achieved when a player successfully discards their
+                        last
+                        card, leaving them with an empty hand. As the final card is played, the game immediately
+                        concludes, and the player who managed to rid themselves of all cards first is declared the
+                        winner. Congratulations!</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <app-card [style]="cardStyles.Default">
+                    <img class="h-72 relative group-hover:scale-105 transition" src="/assets/img/howto-4.png"
+                        alt="Step 3">
+                </app-card>
+                <div class="md:order-first">
+                    <h3 class="text-2xl font-bold">The player with no remaining cards is the winner.</h3>
+                    <p class="text-gray-600 text-lg mt-4">Congratulations! You've mastered the game. Time to play again!
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -81,24 +120,25 @@
 
         <h2 class="text-3xl font-bold text-center text-gray-100 my-12">Testimonials</h2>
         <div class="relative w-full px-6 ">
-            <div #carousel class="flex justify-start flex-auto flex-grow gap-4 overflow-hidden snap-x snap-mandatory ">
-                <div class="testimonial min-w-96 flex-1 snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
+            <div #carousel class="flex  justify-start flex-auto flex-grow gap-4 overflow-hidden snap-x snap-mandatory ">
+                <div class="testimonial min-w-96 flex-grow snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
                     <p class="text-gray-600 mb-4">"CheckGames is amazing! I love playing it every day."</p>
                     <p class="font-bold text-gray-800">- Alice</p>
                 </div>
-                <div class="testimonial min-w-96 flex-grow snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
+                <div
+                    class="testimonial min-w-96 flex-grow flex-grow snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
                     <p class="text-gray-600 mb-4">"The best card game I've ever played. Highly recommended!"</p>
                     <p class="font-bold text-gray-800">- Bob</p>
                 </div>
-                <div class="testimonial min-w-96 snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
+                <div class="testimonial min-w-96 flex-grow snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
                     <p class="text-gray-600 mb-4">"Fun and engaging! The community is great too."</p>
                     <p class="font-bold text-gray-800">- Charlie</p>
                 </div>
-                <div class="testimonial min-w-96 snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
+                <div class="testimonial min-w-96 flex-grow snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
                     <p class="text-gray-600 mb-4">"I can't get enough of CheckGames. It's so much fun!"</p>
                     <p class="font-bold text-gray-800">- Dave</p>
                 </div>
-                <div class="testimonial min-w-96 snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
+                <div class="testimonial min-w-96 flex-grow snap-start p-6 bg-gray-100 rounded-lg shadow-lg mx-2">
                     <p class="text-gray-600 mb-4">"A must-play game for all card game enthusiasts."</p>
                     <p class="font-bold text-gray-800">- Eve</p>
                 </div>
