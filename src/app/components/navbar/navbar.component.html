@@ -1,15 +1,18 @@
-<nav class="flex items-center justify-between bg-gray-800 p-4 px-6  gap-4">
+<nav id="navbar" class="flex items-center flex-col md:flex-row justify-between bg-gray-800 p-4 px-6  gap-4">
     <a href="/" class="logo w-auto mr-2 font-serif font-semibold text-white text-xl">CheckGames</a>
 
-    <div class="grow flex items-center justify-end gap-8 w-auto text-lg">
-        <ul class="flex space-x-4">
-            <li><a href="#" class="text-white hover:text-gray-300">How to Play</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">About</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">Team</a></li>
-        </ul>
-        <button
-            class="w-fit bg-white transition-colors hover:bg-indigo-700 text-indigo-500 hover:text-white font-bold py-2 px-4 rounded">
-            PLAY NOW
-        </button>
+    <div class="group">
+        <!-- <a href="#" target="_self" class="md:hidden text-white">SHOW</a> -->
+        <div class=" grow flex items-center flex-col md:flex-row justify-end gap-8 w-auto text-lg">
+            <ul class="flex space-x-4 flex-col md:flex-row">
+                <li><a href="#howToPlay" class="text-white hover:text-gray-300 scroll-smooth">How to Play</a></li>
+                <li><a href="#about" class="text-white hover:text-gray-300">About</a></li>
+                <li><a href="#team" class="text-white hover:text-gray-300">Team</a></li>
+            </ul>
+            <button
+                class="w-fit bg-white transition-colors hover:bg-indigo-700 text-indigo-500 hover:text-white font-bold py-2 px-4 rounded">
+                PLAY NOW
+            </button>
+        </div>
     </div>
 </nav>
