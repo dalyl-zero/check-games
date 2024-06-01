@@ -5,7 +5,8 @@ import { twMerge } from "tailwind-merge";
 export enum CardStyle {
     Default = "grid grid-cols-1 h-max gap-6 bg-gray-800 text-gray-100 rounded-lg shadow-lg p-5 hover:hue-rotate-90 group justify-items-center text-center",
     DarkMode = "grid grid-cols-1 h-max gap-6 bg-gray-100 text-gray-800 rounded-lg p-5 hover:hue-rotate-90 group justify-items-center text-center",
-    Min = "bg-white p-6 rounded-lg shadow-lg",
+    Min = "group flex flex-col justify-center items-center gap-6 p-5 rounded-lg shadow-lg",
+    ShadowLess = "group flex flex-col justify-center items-center gap-6 p-5 rounded-lg",
 }
 
 @Component({
@@ -13,7 +14,7 @@ export enum CardStyle {
     standalone: true,
     imports: [],
     template: `
-        <div [className]="className">
+        <div [className]="_className">
             <ng-content></ng-content>
         </div>
     `,
@@ -23,13 +24,15 @@ export class CardComponent {
     @Input() className = "";
     @Input() text = "Button works!";
     @Input() style: CardStyle = CardStyle.Default;
+    _className = "";
 
-    constructor() {
-        this.className = this.style;
+    constructor() {}
+
+    ngOnInit() {
+        this._className = twMerge(this.style, this.className);
     }
-
     ngOnChanges() {
         // this.className = [...new Set([...this.style.split(" "), ...this.className.split(" ")])].join(" ");
-        this.className = twMerge(this.style, this.className);
+        this._className = twMerge(this.style, this.className);
     }
 }

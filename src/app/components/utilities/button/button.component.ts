@@ -17,7 +17,7 @@ export class ButtonComponent {
     @Input() disabled?: string | boolean = false;
 
     protected defaultStyle =
-        "bg-white transition-colors hover:bg-indigo-700 text-indigo-500 hover:text-white font-bold py-2 px-4 rounded";
+        "bg-white transition-colors delay-50 duration-300 hover:bg-indigo-700 text-indigo-500 hover:text-white font-bold py-2 px-4 rounded";
 
     constructor() {
         this.className = this.defaultStyle;
