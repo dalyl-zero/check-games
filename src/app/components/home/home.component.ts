@@ -24,6 +24,11 @@ export class HomeComponent {
     cardStyles = CardStyle;
     @ViewChild("carousel") carousel!: ElementRef;
 
+    handlePlayNow() {
+        console.log("Play now!");
+    }
+    handleLearnMore() {}
+
     scrollLeft() {
         this.carousel.nativeElement.scrollBy({
             left: -this.carousel.nativeElement.clientWidth / 2,
