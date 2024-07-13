@@ -30,4 +30,8 @@ export class PlayWithFriendsComponent {
     handleHowToPlay() {
         alert("HOW TO PLAY");
     }
+
+    handlePlayClick() {
+        alert("PLAYING");
+    }
 }
