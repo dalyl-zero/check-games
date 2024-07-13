@@ -1,0 +1,88 @@
+<div class="w-full h-[100vh] bg-slate-800">
+    <div
+        class="container h-full mx-auto pt-20 flex flex-col items-center justify-around"
+    >
+        <header class="flex flex-col items-center gap-2">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl text-gray-100">
+                Check Games
+            </h1>
+            <h2 class="text-4xl text-blue-500">Play with Friends</h2>
+        </header>
+
+        <app-card [style]="cardStyles.DarkMode" className="w-full lg:w-10/12">
+            <h4 class="">Share this link with friends to play together</h4>
+
+            <app-text-snippet
+                text="https://loremoufpdk/ocskpfkc"
+                successMessage="Link copied to clipboard!"
+            ></app-text-snippet>
+
+            <div>
+                <input type="checkbox" name="autocomplete" id="" />
+                Complete to 4 players
+            </div>
+
+            <div class="w-full flex gap-6 border rounded px-4 py-2">
+                <div class="player-profile">
+                    <img
+                        class="w-8 h-8"
+                        src="/assets/img/user-0.png"
+                        alt="User profile picture"
+                    />
+                    You
+                </div>
+                <div class="player-profile">
+                    <img
+                        class="w-8 h-8"
+                        src="/assets/img/user-2.png"
+                        alt="User profile picture"
+                    />
+                    Sandy
+                </div>
+                <div class="player-profile">
+                    <img
+                        class="w-8 h-8"
+                        src="/assets/img/user-3.png"
+                        alt="User profile picture"
+                    />
+                    SMF
+                </div>
+            </div>
+        </app-card>
+
+        <div
+            class="flex flex-col md:flex-row items-center md:justify-between justify-self-end gap-4 w-2/3"
+        >
+            <div class="flex gap-2 h-min">
+                <a
+                    routerLink="/play"
+                    [className]="
+                        buttonStyles.Default + ' cursor-pointer text-zinc-500'
+                    "
+                    ><i class="bx bx-arrow-back"></i> Go Back</a
+                >
+                <app-button
+                    className="w-full bg-orange-400 text-white"
+                    (onClick)="handleHowToPlay()"
+                    ><i class="bx bx-info-circle"></i> How to Play</app-button
+                >
+            </div>
+            <div class="controls">
+                <app-button
+                    [style]="buttonStyles.Icon"
+                    className="text-white text-3xl"
+                    (onClick)="handleMusicBtnClick()"
+                >
+                    <i class="bx bxs-music"></i>
+                </app-button>
+                <app-button
+                    [style]="buttonStyles.Icon"
+                    className="text-white text-3xl"
+                    (onClick)="handleSoundBtnClick()"
+                >
+                    <i class="bx bx-volume-full"></i>
+                </app-button>
+            </div>
+        </div>
+    </div>
+</div>

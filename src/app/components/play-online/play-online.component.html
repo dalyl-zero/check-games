@@ -1,0 +1,32 @@
+<div class="w-full h-[100vh] bg-slate-800">
+    <div
+        class="container h-full mx-auto pt-20 flex flex-col items-center justify-around"
+    >
+        <header class="flex flex-col items-center gap-2">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl text-gray-100">
+                Check Games
+            </h1>
+            <h2 class="text-4xl text-blue-500">Play Online</h2>
+        </header>
+        <h4 class="text-white animate-pulse">Waiting for players...</h4>
+
+        <div
+            class="flex flex-col md:flex-row items-center md:justify-between justify-self-end gap-4 w-2/3"
+        >
+            <div class="flex gap-2 h-min">
+                <a
+                    routerLink="/play"
+                    [className]="
+                        buttonStyles.Default + ' cursor-pointer text-zinc-500'
+                    "
+                    ><i class="bx bx-arrow-back"></i> Go Back</a
+                >
+                <app-button
+                    className="w-full bg-orange-400 text-white"
+                    (onClick)="handleHowToPlay()"
+                    ><i class="bx bx-info-circle"></i> How to Play</app-button
+                >
+            </div>
+        </div>
+    </div>
+</div>
